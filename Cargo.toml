@@ -82,3 +82,8 @@ rev = 'f2f2994822f4331291597e341798fb6271bb6ef4'
 [[bin]]
 name = 'hydrocotyle'
 path = 'src/main.rs'
+
+[workspace]
+members = [
+  "srml/example"
+]

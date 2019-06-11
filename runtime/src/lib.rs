@@ -192,6 +192,10 @@ impl template::Trait for Runtime {
 	type Event = Event;
 }
 
+impl example::Trait for Runtime {
+	type Event = Event;
+}
+
 construct_runtime!(
 	pub enum Runtime with Log(InternalLog: DigestItem<Hash, AuthorityId, AuthoritySignature>) where
 		Block = Block,
@@ -207,6 +211,7 @@ construct_runtime!(
 		Sudo: sudo,
 		// Used for the module template in `./template.rs`
 		TemplateModule: template::{Module, Call, Storage, Event<T>},
+		Example: example::{Module, Call, Storage, Event<T>},
 	}
 );
 
