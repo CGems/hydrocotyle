@@ -709,9 +709,28 @@ version = "1.3.3"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 
 [[package]]
+name = "hyd-staking"
+version = "1.0.0"
+dependencies = [
+ "hex-literal 0.1.3 (registry+https://github.com/rust-lang/crates.io-index)",
+ "parity-codec 3.5.1 (registry+https://github.com/rust-lang/crates.io-index)",
+ "safe-mix 1.0.0 (registry+https://github.com/rust-lang/crates.io-index)",
+ "serde 1.0.89 (registry+https://github.com/rust-lang/crates.io-index)",
+ "sr-io 1.0.0 (git+https://github.com/paritytech/substrate.git?rev=f2f2994822f4331291597e341798fb6271bb6ef4)",
+ "sr-primitives 1.0.0 (git+https://github.com/paritytech/substrate.git?rev=f2f2994822f4331291597e341798fb6271bb6ef4)",
+ "sr-std 1.0.0 (git+https://github.com/paritytech/substrate.git?rev=f2f2994822f4331291597e341798fb6271bb6ef4)",
+ "srml-consensus 1.0.0 (git+https://github.com/paritytech/substrate.git?rev=f2f2994822f4331291597e341798fb6271bb6ef4)",
+ "srml-session 1.0.0 (git+https://github.com/paritytech/substrate.git?rev=f2f2994822f4331291597e341798fb6271bb6ef4)",
+ "srml-support 1.0.0 (git+https://github.com/paritytech/substrate.git?rev=f2f2994822f4331291597e341798fb6271bb6ef4)",
+ "srml-system 1.0.0 (git+https://github.com/paritytech/substrate.git?rev=f2f2994822f4331291597e341798fb6271bb6ef4)",
+ "substrate-keyring 1.0.0 (git+https://github.com/paritytech/substrate.git?rev=f2f2994822f4331291597e341798fb6271bb6ef4)",
+]
+
+[[package]]
 name = "hydrocotyle-runtime"
 version = "1.0.0"
 dependencies = [
+ "hyd-staking 1.0.0",
  "parity-codec 3.5.1 (registry+https://github.com/rust-lang/crates.io-index)",
  "safe-mix 1.0.0 (registry+https://github.com/rust-lang/crates.io-index)",
  "serde 1.0.89 (registry+https://github.com/rust-lang/crates.io-index)",
@@ -726,6 +745,7 @@ dependencies = [
  "srml-example 1.0.0",
  "srml-executive 1.0.0 (git+https://github.com/paritytech/substrate.git?rev=f2f2994822f4331291597e341798fb6271bb6ef4)",
  "srml-indices 1.0.0 (git+https://github.com/paritytech/substrate.git?rev=f2f2994822f4331291597e341798fb6271bb6ef4)",
+ "srml-session 1.0.0 (git+https://github.com/paritytech/substrate.git?rev=f2f2994822f4331291597e341798fb6271bb6ef4)",
  "srml-sudo 1.0.0 (git+https://github.com/paritytech/substrate.git?rev=f2f2994822f4331291597e341798fb6271bb6ef4)",
  "srml-support 1.0.0 (git+https://github.com/paritytech/substrate.git?rev=f2f2994822f4331291597e341798fb6271bb6ef4)",
  "srml-system 1.0.0 (git+https://github.com/paritytech/substrate.git?rev=f2f2994822f4331291597e341798fb6271bb6ef4)",

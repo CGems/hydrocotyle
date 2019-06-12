@@ -85,5 +85,6 @@ path = 'src/main.rs'
 
 [workspace]
 members = [
-  "srml/example"
+  "srml/example",
+  "srml/staking"
 ]

@@ -28,7 +28,9 @@ std = [
     'consensus-aura/std',
     'offchain-primitives/std',
     'example/std',
+    'staking/std',
 ]
+
 [dependencies.aura]
 default_features = false
 git = 'https://github.com/paritytech/substrate.git'
@@ -154,7 +156,18 @@ git = 'https://github.com/paritytech/substrate.git'
 package = 'sr-version'
 rev = 'f2f2994822f4331291597e341798fb6271bb6ef4'
 
+[dependencies.session]
+default_features = false
+git = 'https://github.com/paritytech/substrate.git'
+package = 'srml-session'
+rev = 'f2f2994822f4331291597e341798fb6271bb6ef4'
+
 [dependencies.example]
 default_features = false
 path = "../srml/example"
 package = 'srml-example'
+
+[dependencies.staking]
+default_features = false
+path = "../srml/staking"
+package = 'hyd-staking'
