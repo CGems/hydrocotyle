@@ -1,9 +1,10 @@
 use primitives::{ed25519, sr25519, Pair};
 use hydrocotyle_runtime::{
 	AccountId, GenesisConfig, ConsensusConfig, TimestampConfig, BalancesConfig,
-        SessionConfig, StakingConfig,
+        SessionConfig, 
 	SudoConfig, IndicesConfig,
-        StakerStatus, Perbill
+        StakerStatus, HydStakingConfig,
+        Perbill
 };
 use substrate_service;
 
@@ -138,19 +139,19 @@ fn testnet_genesis(
 			session_length: 10,
 			keys: initial_authorities.iter().map(|x| (x.1.clone(), x.2.clone())).collect::<Vec<_>>(),
 		}),
-		staking: Some(StakingConfig {
-			current_era: 0,
-			minimum_validator_count: 1,
-			validator_count: 2,
-			sessions_per_era: 5,
-			bonding_duration: 12,
-			offline_slash: Perbill::zero(),
-			session_reward: Perbill::zero(),
-			current_session_reward: 0,
-			offline_slash_grace: 0,
-			stakers: initial_authorities.iter().map(|x| (x.0.clone(), x.1.clone(), STASH, StakerStatus::Validator)).collect(),
-			invulnerables: initial_authorities.iter().map(|x| x.1.clone()).collect(),
-		}),
+                hyd_staking: Some(HydStakingConfig {
+                        current_era: 0,
+                        minimum_validator_count: 1,
+                        validator_count: 2,
+                        sessions_per_era: 5,
+                        bonding_duration: 12,
+                        offline_slash: Perbill::zero(),
+                        session_reward: Perbill::zero(),
+                        current_session_reward: 0,
+                        offline_slash_grace: 0,
+                        stakers: initial_authorities.iter().map(|x| (x.1.clone(), x.1.clone(), STASH, StakerStatus::Validator)).collect(),
+                        invulnerables: initial_authorities.iter().map(|x| x.1.clone()).collect(),
+                }),
 
 	}
 }

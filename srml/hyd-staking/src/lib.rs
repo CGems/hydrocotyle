@@ -525,6 +525,8 @@ decl_storage! {
 		build(|storage: &mut primitives::StorageOverlay, _: &mut primitives::ChildrenStorageOverlay, config: &GenesisConfig<T>| {
 			with_storage(storage, || {
 				for &(ref stash, ref controller, balance, ref status) in &config.stakers {
+                                        println!("{:?}", &stash);
+                                        println!("{:?}", T::Currency::free_balance(&stash));
 					assert!(T::Currency::free_balance(&stash) >= balance);
 					let _ = <Module<T>>::bond(
 						T::Origin::from(Some(stash.clone()).into()),

@@ -719,6 +719,7 @@ dependencies = [
  "sr-io 1.0.0 (git+https://github.com/paritytech/substrate.git?rev=f2f2994822f4331291597e341798fb6271bb6ef4)",
  "sr-primitives 1.0.0 (git+https://github.com/paritytech/substrate.git?rev=f2f2994822f4331291597e341798fb6271bb6ef4)",
  "sr-std 1.0.0 (git+https://github.com/paritytech/substrate.git?rev=f2f2994822f4331291597e341798fb6271bb6ef4)",
+ "srml-balances 1.0.0 (git+https://github.com/paritytech/substrate.git?rev=f2f2994822f4331291597e341798fb6271bb6ef4)",
  "srml-consensus 1.0.0 (git+https://github.com/paritytech/substrate.git?rev=f2f2994822f4331291597e341798fb6271bb6ef4)",
  "srml-session 1.0.0 (git+https://github.com/paritytech/substrate.git?rev=f2f2994822f4331291597e341798fb6271bb6ef4)",
  "srml-support 1.0.0 (git+https://github.com/paritytech/substrate.git?rev=f2f2994822f4331291597e341798fb6271bb6ef4)",

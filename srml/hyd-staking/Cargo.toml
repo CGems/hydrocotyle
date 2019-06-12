@@ -70,7 +70,7 @@ package = 'srml-timestamp'
 rev = 'f2f2994822f4331291597e341798fb6271bb6ef4'
 default-features = false
 
-[dev-dependencies.balances]
+[dependencies.balances]
 git = 'https://github.com/paritytech/substrate.git'
 package = 'srml-balances'
 rev = 'f2f2994822f4331291597e341798fb6271bb6ef4'

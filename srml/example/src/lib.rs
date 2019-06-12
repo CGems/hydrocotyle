@@ -20,7 +20,7 @@
 // Ensure we're `no_std` when compiling for Wasm.
 #![cfg_attr(not(feature = "std"), no_std)]
 
-use srml_support::{StorageValue, dispatch::Result, decl_module, decl_storage, decl_event};
+use srml_support::{StorageValue, dispatch::Result, decl_module, decl_storage, decl_event, traits::Currency};
 use system::ensure_signed;
 
 /// Our module's configuration trait. All our types and consts go in here. If the

@@ -23,7 +23,7 @@ use client::{
 use version::RuntimeVersion;
 #[cfg(feature = "std")]
 use version::NativeVersion;
-pub use staking::StakerStatus;
+pub use hyd_staking::StakerStatus;
 
 // A few exports that help ease life for downstream crates.
 #[cfg(any(feature = "std", test))]
@@ -213,17 +213,17 @@ impl example::Trait for Runtime {
 
 impl session::Trait for Runtime {
 	type ConvertAccountIdToSessionKey = ();
-	type OnSessionChange = Staking;
+	type OnSessionChange = ();
 	type Event = Event;
 }
 
-impl staking::Trait for Runtime {
-	type Currency = balances::Module<Self>;
-	type CurrencyToVote = CurrencyToVoteHandler;
-	type OnRewardMinted = ();
-	type Event = Event;
-	type Slash = ();
-	type Reward = ();
+impl hyd_staking::Trait for Runtime {
+        type Currency = balances::Module<Self>;
+        type CurrencyToVote = CurrencyToVoteHandler;
+        type OnRewardMinted = ();
+        type Event = Event;
+        type Slash = ();
+        type Reward = ();
 }
 
 construct_runtime!(
@@ -239,7 +239,7 @@ construct_runtime!(
 		Indices: indices,
 		Balances: balances,
                 Session: session,
-                Staking: staking::{default, OfflineWorker},
+                HydStaking: hyd_staking::{default, OfflineWorker},
 		Sudo: sudo,
 		// Used for the module template in `./template.rs`
 		TemplateModule: template::{Module, Call, Storage, Event<T>},

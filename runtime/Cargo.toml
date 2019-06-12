@@ -28,7 +28,7 @@ std = [
     'consensus-aura/std',
     'offchain-primitives/std',
     'example/std',
-    'staking/std',
+    'hyd_staking/std',
 ]
 
 [dependencies.aura]
@@ -167,7 +167,7 @@ default_features = false
 path = "../srml/example"
 package = 'srml-example'
 
-[dependencies.staking]
+[dependencies.hyd_staking]
 default_features = false
-path = "../srml/staking"
+path = "../srml/hyd-staking"
 package = 'hyd-staking'
